@@ -70,6 +70,23 @@ function getRandomQuote() {
 function printQuote() {
   var quoteDisplay = getRandomQuote();
   var html
+
+  // Test to improve the logic
+  var quote, source, citation, year
+  quote = '<p class="quote">' + quoteDisplay.quote + '</p>'
+  source = '<p class="source">' + quoteDisplay.source
+  if (quoteDisplay.citation === "") {citation = ""} else {
+    citation = '<span class="citation">' + quoteDisplay.citation + '</span>'
+  }
+  if (quoteDisplay.year === "") {year = ""} else {
+    year = '<span class="year">' + quoteDisplay.year + '</span>'
+  }
+
+  html = quote + source + citation + year + '</p>'
+
+
+  /*
+  // previous logic tree
   html = '<p class="quote">' + quoteDisplay.quote + '</p>'
   html += '<p class="source">' + quoteDisplay.source
     if (quoteDisplay.citation === "") {
@@ -87,6 +104,7 @@ function printQuote() {
     html += '<span class="year">' + quoteDisplay.year + '</span> </p>'
     }
   }
+  */
 
   document.getElementById('quote-box').innerHTML = html ;
 
