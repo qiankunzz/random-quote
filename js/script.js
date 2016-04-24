@@ -93,19 +93,17 @@ function printQuote() {
   html = quote + source + citation + year + '</p>'
 
 // Adding tags for display
-  var htmlTags = '<p class="tags">'
+  var htmlTags = '<p>'
   var lengthTags = quoteDisplay.tags.length
   for (i = 0; i < lengthTags; i++) {
-    if (i === lengthTags - 1) {
-      htmlTags += quoteDisplay.tags[i] +"</p>"
-    } else {
-      htmlTags += quoteDisplay.tags[i] +", "
-    }
+    
+      htmlTags += '<span class="tags">' + quoteDisplay.tags[i] + '</span>'
+
   }
-  html += htmlTags
+  html += htmlTags  + "</p>"
 
 
-  
+
   /*
   // previous logic tree
   html = '<p class="quote">' + quoteDisplay.quote + '</p>'
