@@ -142,4 +142,4 @@ printQuote();
 
 
 // Set interval
-var intervalID = window.setInterval(printQuote, 30000)
+var intervalID = window.setInterval(printQuote, 5000)
