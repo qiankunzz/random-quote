@@ -8,6 +8,7 @@ var quote1 = {
   source:"Oscar Wilde",
   citation:"",
   year:""
+  tags:["Brainy","Success","Neighbor"]
 };
 
 var quote2 = {
@@ -15,6 +16,7 @@ var quote2 = {
   source:"Marilyn Monroe",
   citation:"",
   year:""
+  tags:["tag1","Success","Love"]
 };
 
 var quote3 = {
@@ -22,6 +24,7 @@ var quote3 = {
   source:"Albert Einstein",
   citation:"Selected Pulications",
   year:"1945"
+  tags:["tag2","Success","tag3"]
 };
 
 var quote4 = {
@@ -29,6 +32,7 @@ var quote4 = {
   source:"Bernard M. Baruch",
   citation:"",
   year:"1802"
+  tags:["tag1","Success","Neighbor"]
 };
 
 var quote5 = {
@@ -36,6 +40,7 @@ var quote5 = {
   source:"William W. Purkey",
   citation:"",
   year:"1978"
+  tags:["tag1","tag2","tag3"]
 };
 
 var quote6 = {
@@ -43,6 +48,7 @@ var quote6 = {
   source:"Dr. Seuss",
   citation:"",
   year:""
+  tags:["Brainy","Success","Neighbor"]
 };
 
 var quote7 = {
@@ -50,6 +56,7 @@ var quote7 = {
   source:"Marcus Tullius Cicero",
   citation:"",
   year:"275"
+  tags:["Life","tag1","Neighbor"]
 };
 
 var quote8 = {
@@ -57,6 +64,7 @@ var quote8 = {
   source:"Frank Zappa",
   citation:"",
   year:"1967"
+  tags:["Life","Success","tag2"]
 }
 
 var quoteReserve = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8]
