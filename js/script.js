@@ -72,7 +72,6 @@ var quoteReserve = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quot
 // Extra Credit Step-3 Storing the random number in an array
 var randomNumber
 var randomNumberStored = []
-console.log (randomNumberStored)
 
 // Starting the random generator
 // This function is to generator a random Number that doesn't generated before
@@ -87,7 +86,7 @@ function getNewRandomNumber() {
 // This function is to generate the quote
 function getRandomQuote() {
   getNewRandomNumber();
-  console.log(randomNumber);
+//  console.log(randomNumber);
   return quoteReserve[randomNumber];
 };
 
@@ -133,7 +132,7 @@ function printQuote() {
   if (randomNumberStored.length === quoteReserve.length) {
     randomNumberStored = []
   }
-  console.log(randomNumberStored)
+//  console.log(randomNumberStored)
   //console.log(ifShown)
   return randomNumberStored
 }
