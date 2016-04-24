@@ -96,9 +96,7 @@ function printQuote() {
   var htmlTags = '<p>'
   var lengthTags = quoteDisplay.tags.length
   for (i = 0; i < lengthTags; i++) {
-    
       htmlTags += '<span class="tags">' + quoteDisplay.tags[i] + '</span>'
-
   }
   html += htmlTags  + "</p>"
 
