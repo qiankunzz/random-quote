@@ -69,11 +69,28 @@ var quote8 = {
 
 var quoteReserve = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8]
 
-// Starting the randome generator
+// Extra Credit Step-3 Storing the random number in an array
+var randomNumber
+var randomNumberStored = []
+console.log (randomNumberStored)
+
+// Starting the random generator
+// This function is to generator a random Number that doesn't generated before
+function getNewRandomNumber() {
+    randomNumber = Math.floor( 8 * Math.random());
+    while (randomNumberStored.includes(randomNumber)) {
+      randomNumber = Math.floor( 8 * Math.random());
+    }
+  return randomNumber
+};
+
+// This function is to generate the quote
 function getRandomQuote() {
-  var randomNumber= Math.floor( 8 * Math.random())
+  getNewRandomNumber();
+  console.log(randomNumber);
   return quoteReserve[randomNumber];
 };
+
 
 function printQuote() {
   var quoteDisplay = getRandomQuote();
@@ -100,31 +117,25 @@ function printQuote() {
   }
   html += htmlTags  + "</p>"
 
+// Adding random color for background and Button
+  var randomColor = '#'
+  randomColor += Math.floor(Math.random()*16777215).toString(16);
+  document.getElementById("mainBody").style.backgroundColor = randomColor
+  document.getElementById("loadQuote").style.backgroundColor = randomColor
 
-
-  /*
-  // previous logic tree
-  html = '<p class="quote">' + quoteDisplay.quote + '</p>'
-  html += '<p class="source">' + quoteDisplay.source
-    if (quoteDisplay.citation === "") {
-      if (quoteDisplay.year === "") {
-        html += '</p>'
-      } else {
-        html += '<span class="year">' + quoteDisplay.year + '</span> </p>'
-      }
-    }
-    else {
-  html += '<span class="citation">' + quoteDisplay.citation + '</span>'
-      if (quoteDisplay.year === "") {
-        html += '</p>'
-      } else {
-    html += '<span class="year">' + quoteDisplay.year + '</span> </p>'
-    }
-  }
-  */
-
+// Writing HTML
   document.getElementById('quote-box').innerHTML = html ;
 
+
+// Storing the previous random numbers in an array
+
+  randomNumberStored.push(randomNumber)
+  if (randomNumberStored.length === quoteReserve.length) {
+    randomNumberStored = []
+  }
+  console.log(randomNumberStored)
+  //console.log(ifShown)
+  return randomNumberStored
 }
 
 printQuote();
