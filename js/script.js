@@ -65,13 +65,13 @@ var quote8 = {
   citation:"",
   year:"1967",
   tags:["Life","Success","tag2"],
-}
+};
 
-var quoteReserve = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8]
+var quoteReserve = [quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8];
 
 // Extra Credit Step-3 Storing the random number in an array
-var randomNumber
-var randomNumberStored = []
+var randomNumber;
+var randomNumberStored = [];
 
 // Starting the random generator
 // This function is to generator a random Number that doesn't generated before
@@ -80,47 +80,48 @@ function getNewRandomNumber() {
     while (randomNumberStored.includes(randomNumber)) {
       randomNumber = Math.floor( 8 * Math.random());
     }
-  return randomNumber
-};
+  return randomNumber;
+}
 
 // This function is to generate the quote
 function getRandomQuote() {
   getNewRandomNumber();
 //  console.log(randomNumber);
   return quoteReserve[randomNumber];
-};
+}
 
 
 function printQuote() {
   var quoteDisplay = getRandomQuote();
-  var html
+  var html;
 
   // Test to improve the logic
-  var quote, source, citation, year
-  quote = '<p class="quote">' + quoteDisplay.quote + '</p>'
-  source = '<p class="source">' + quoteDisplay.source
-  if (quoteDisplay.citation === "") {citation = ""} else {
-    citation = '<span class="citation">' + quoteDisplay.citation + '</span>'
+  var quote, source, citation, year;
+  quote = '<p class="quote">' + quoteDisplay.quote + '</p>';
+  source = '<p class="source">' + quoteDisplay.source;
+  if (quoteDisplay.citation === "") {citation = "";} else {
+    citation = '<span class="citation">' + quoteDisplay.citation + '</span>';
   }
-  if (quoteDisplay.year === "") {year = ""} else {
-    year = '<span class="year">' + quoteDisplay.year + '</span>'
+  if (quoteDisplay.year === "") {year = "";} else {
+    year = '<span class="year">' + quoteDisplay.year + '</span>';
   }
 
-  html = quote + source + citation + year + '</p>'
+  html = quote + source + citation + year + '</p>';
 
 // Adding tags for display
-  var htmlTags = '<p>'
-  var lengthTags = quoteDisplay.tags.length
+  var htmlTags = '<p>';
+  var lengthTags = quoteDisplay.tags.length;
+  var i;
   for (i = 0; i < lengthTags; i++) {
-      htmlTags += '<span class="tags">' + quoteDisplay.tags[i] + '</span>'
+      htmlTags += '<span class="tags">' + quoteDisplay.tags[i] + '</span>';
   }
-  html += htmlTags  + "</p>"
+  html += htmlTags  + "</p>";
 
 // Adding random color for background and Button
-  var randomColor = '#'
+  var randomColor = '#';
   randomColor += Math.floor(Math.random()*16777215).toString(16);
-  document.getElementById("mainBody").style.backgroundColor = randomColor
-  document.getElementById("loadQuote").style.backgroundColor = randomColor
+  document.getElementById("mainBody").style.backgroundColor = randomColor;
+  document.getElementById("loadQuote").style.backgroundColor = randomColor;
 
 // Writing HTML
   document.getElementById('quote-box').innerHTML = html ;
@@ -128,17 +129,17 @@ function printQuote() {
 
 // Storing the previous random numbers in an array
 
-  randomNumberStored.push(randomNumber)
+  randomNumberStored.push(randomNumber);
   if (randomNumberStored.length === quoteReserve.length) {
-    randomNumberStored = []
+    randomNumberStored = [];
   }
 //  console.log(randomNumberStored)
   //console.log(ifShown)
-  return randomNumberStored
+  return randomNumberStored;
 }
 
 printQuote();
 
 
 // Set interval
-var intervalID = window.setInterval(printQuote, 5000)
+window.setInterval(printQuote, 5000);
