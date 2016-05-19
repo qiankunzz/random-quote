@@ -4,19 +4,19 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 // 1. create 8 quotes as quote reservoir
 var quote1 = {
-  quote:"Be yourself; everyone else is already taken.",
-  source:"Oscar Wilde",
-  citation:"",
-  year:"",
-  tags:["Brainy","Success","Neighbor"],
+  quote:"I like thinking big. I always have. To me its very simple: if youre going to be thinking anyway, you might as well think big.",
+  source:"Rem Koolhaas",
+  citation:"S,M,L,XL",
+  year:"1995",
+  tags:["Brainy","Success","Life"],
 };
 
 var quote2 = {
-  quote:"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.",
-  source:"Marilyn Monroe",
+  quote:"When love and skill work together, expect a masterpiece."
+  source:"John Ruskin",
   citation:"",
   year:"",
-  tags:["tag1","Success","Love"],
+  tags:["Work","Success","Love"],
 };
 
 var quote3 = {
