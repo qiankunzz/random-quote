@@ -12,7 +12,7 @@ var quote1 = {
 };
 
 var quote2 = {
-  quote:"When love and skill work together, expect a masterpiece."
+  quote:"When love and skill work together, expect a masterpiece.",
   source:"John Ruskin",
   citation:"",
   year:"",
